@@ -1,0 +1,86 @@
+
+ROM used: 20750 (63%)
+          20750 (63%) including unused fragments
+
+          2 Average locations per line
+          8 Average locations per statement
+
+RAM used: 427 (28%) at main() level
+          447 (29%) worst case
+
+Stack used: 6 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+ 6959  2633  96  ESPAN-04_test_faultDelayTime.c
+   62     0   0  ..\ESPAN04_20 - Delay - SP - SMD - PIC18F252\ESPAN-04.h
+  318     0   0  C:\Program Files (x86)\PICC\devices\18F252.h
+ 1032   110   4  ..\ESPAN04_20 - Delay - SP - SMD - PIC18F252\23S17.c
+----- -----
+ 8371  2743 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     48   0   1             @delay_ms1
+0    150   0   0   404  1.8  IO_INIT
+0     50   0   4   147  2.2  IO_WRITE_REGISTER
+0     56   0   4   178  3.2  IO_READ_REGISTER
+0     22   0   2    59  1.5  IO_OUTPUT_A
+0     22   0   2    59  1.5  IO_OUTPUT_B
+0     28   0   2    75  2.3  IO_INPUT_A
+0     28   0   2    75  2.3  IO_INPUT_B
+0     18   0   2    59  1.5  IO_SET_TRIS_A
+0     20   0   2    74  0.6  IO_SET_TRIS_B
+0     10   0   0             @PUTCHARI_BIU_1
+0    282   1   0             @const254
+0    282   1   0             @const256
+0     68   0   3   131  3.5  StoreReleaseFault
+0     50   0   5             @READBITA
+0     66   0   6             @WRITEBITA
+0    110   0   6   357  6.6  CRC
+0    274   1   2  1248  4.4  Driver595
+0    444   1   2  4003  5.5  Alarmtosend
+0    566   1   2  2746  6.4  checkCommand
+0   5678  14   2 41668  9.0  Modbus_Function
+0   1812   4   4  8944 11.4  Read_input
+0     34   0   5             @MUL1616
+0     56   0   0             @goto10944
+0     56   0   0             @goto10973
+0     56   0   0             @goto11008
+0     56   0   0             @goto11037
+0   1990   5   1  8337  3.5  Read_Config
+0     18   0   0    35  1.6  RDA_isr
+0      6   0   0     5  1.0  TIMER1_isr
+0    148   0   1  1334  5.9  TIMER2_isr
+0   3626   9  10 53903  6.5  Anal_Function
+0    564   1   1  8848  4.5  Send_Ouput
+0     96   0   0  1014  3.9  ForceAllAlarm
+0    204   0  11  1286  5.9  check_test
+0    238   1   3  3771  5.4  check_ack
+0    288   1   3  2208  5.4  check_reset
+0   1168   3   5  4732  6.0  CheckAutoReset
+0   1780   4   2 13862 10.0  MAIN
+0     56   0   0             @goto14807
+0     56   0   0             @goto14825
+
+Program metrics:
+    Functions               28
+    Statements              2743
+    Comments                4316
+    Volume (V)              213180
+    Difficilty (D)          127.6
+    Effort to implement (E) 27203763
+    Time to implement (T)   419 hours, 49 minutes
+    Est Delivered Bugs (B)  30
+    Cyclomatic Complexity   482
+    Maintainability (MI)    65
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000AC   166  0  
+000AE-07FFE  20580  12014  
+
+
+

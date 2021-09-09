@@ -1,0 +1,86 @@
+[Directories]
+Include=<default>
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=1
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=ESPAN-04_test_faultDelayTime.hex
+Development_Mode=
+Processor_Text=PIC18F252
+ToolSuite=CCS
+CCSVersion=5.080
+Compiler=PCH
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=ESPAN-04_test_faultDelayTime.c
+
+[ESPAN-04_test_faultDelayTime.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=ESPAN-04_test_faultDelayTime.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=ESPAN-04_test_faultDelayTime.c
+t1=6518
+Count=2
+2=C:\Program Files (x86)\PICC\Devices\18F252.h
+t2=46
+
+[ProjectLog]
+Days=2
+D1=21-12-2017
+D1_L=3
+D1_L1=[34828]Project Closed.
+D1_L2=[34861]Project Opened.
+D1_L3=[34866]Project Closed.
+D2=12-11-2019
+D2_L=6
+D2_L1=[50507]Project Opened.
+D2_L2=[50532]Started Editing.
+D2_L3=[50853]Stopped Editing.
+D2_L4=[50874]Started Editing.
+D2_L5=[51320]Stopped Editing.
+D2_L6=[51488]Project Closed.
+[Units]
+Count=1
+1=ESPAN-04_test_faultDelayTime (main)
