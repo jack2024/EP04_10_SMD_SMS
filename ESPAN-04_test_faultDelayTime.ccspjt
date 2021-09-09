@@ -67,7 +67,7 @@ Count=2
 t2=46
 
 [ProjectLog]
-Days=2
+Days=3
 D1=21-12-2017
 D1_L=3
 D1_L1=[34828]Project Closed.
@@ -81,6 +81,10 @@ D2_L3=[50853]Stopped Editing.
 D2_L4=[50874]Started Editing.
 D2_L5=[51320]Stopped Editing.
 D2_L6=[51488]Project Closed.
+D3=09-09-2021
+D3_L=2
+D3_L1=[33132]Project Opened.
+D3_L2=[33138]Started Editing.
 [Units]
 Count=1
 1=ESPAN-04_test_faultDelayTime (main)
