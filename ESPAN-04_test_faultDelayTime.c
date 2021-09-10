@@ -200,7 +200,7 @@ int8 MCP23s17_Ip_dat;
 int8 MCP23s17_Op_dat;
 
 unsigned char T_timeout;   //use for calculate RxD timeout
-unsigned char index = 0x00;         //use for Loop
+unsigned int16 index = 0x00;         //use for Loop
 
 int8 outmcp23 = 0;
 
@@ -474,6 +474,8 @@ void checkCommand(void)
      restart_wdt();
      RxD_DataLen ++ ;
      sequence = addr_sq;
+     count_bytecount =0; // bytecount = 2 Byte //jj10092564
+     
      T_timeout = 0x14; //200ms
    }
    else if(sequence == addr_sq)
@@ -482,25 +484,30 @@ void checkCommand(void)
       restart_wdt();
       RxD_DataLen ++ ;
 
-       if(RxD_Buff[RxD_DataLen - 1] < 0x17)   //Function Code Must be less than 0x20
+       if(RxD_Buff[1] < 0x17)   //Function Code Must be less than 0x20
        {
            sequence = code_sq;
            T_timeout = 0x14; //200ms
        }
-       else if(RxD_Buff[RxD_DataLen - 1] == 0x20)   /////Read Setting//////
+       else if(RxD_Buff[1] == 0x20)   /////Read Setting//////
        {
           sequence = ubyte_lo_sq;
           T_timeout = 0x14; //200ms
        }
-       else if(RxD_Buff[RxD_DataLen - 1] == 0x21)   /////Write setting/////
-       {
+       else if(RxD_Buff[1] == 0x21)   /////Write setting/////
+       { 
           sequence = byte_count_sq ;
           T_timeout = 0x14; //200ms
        }
        //   SMS     
-       else if(RxD_Buff[RxD_DataLen - 1] == 0x22)   /////SMS setting/////
+       else if(RxD_Buff[1] == 0x22)   /////SMS setting/////
        {
-          sequence = byte_count_sq ;
+          if(count_bytecount ==0){ // bytecount first Byte
+            count_bytecount =1;
+           }
+           else if (count_bytecount == 1){ // bytecount Second Byte
+            sequence = byte_count_sq ;
+           }
           T_timeout = 0x14; //200ms
        }
        else                           // Invalid Code
@@ -509,6 +516,7 @@ void checkCommand(void)
           sequence = end_sq;
           T_timeout = 0x00; 
           output_bit(P485ctrl,0);
+          count_bytecount =0; // bytecount = 2 Byte //jj10092564
        }
    }
    else if(sequence == byte_count_sq)
@@ -516,7 +524,14 @@ void checkCommand(void)
       RxD_Buff[RxD_DataLen] = SBUF ;      //Byte 3   Data Byte Count
       restart_wdt();
       RxD_DataLen ++ ;
-      index = RxD_Buff[RxD_DataLen - 1] ;    //Data Byte Count
+      if(RxD_Buff[1] == 0x22)   /////SMS setting/////
+      {
+         index = (RxD_Buff[2]*100) + RxD_Buff[3];
+      }
+      else{
+         index = RxD_Buff[RxD_DataLen - 1] ;    //Data Byte Count
+      }
+      
       T_timeout = 0x14; //200ms
       sequence = data_sq ;
    }
@@ -1144,11 +1159,11 @@ void Modbus_Function(void)
          else if(RxD_Buff[1] == 0x22)///////////// WRITE Faultname /////////////////////
          {
             //SMS_Massage
-            int16  i =3,j=0,k=0;
+            int16  i =4,j=0,k=0; //i =4 are first data from RxD_Buff[]
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1168,7 +1183,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {  
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1187,7 +1202,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1206,7 +1221,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1225,7 +1240,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1244,7 +1259,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1263,7 +1278,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1282,7 +1297,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1302,7 +1317,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -1320,7 +1335,7 @@ void Modbus_Function(void)
             for(; ; i++,j++)
             {
                restart_wdt();
-               if((RxD_Buff[i] == 0x0D) || (j > 41))
+               if((RxD_Buff[i] == 0x0D) || (j > 30))
                {
                   write_eeprom(0x5D+i,RxD_Buff[i]);
                   break;
@@ -2177,8 +2192,7 @@ void TIMER2_isr(void)      //10ms
       FlashingRateTime--;
       if(FlashingRateTime == 0)
       {
-         outmcp23 = 0xff;
-         
+         outmcp23 = 0xff;  
          if(SyncStatus == 0)
          {
             if(FlashingFlag == 1)
@@ -2188,7 +2202,6 @@ void TIMER2_isr(void)      //10ms
             }
             else
             {
-
                FlashingFlag = 1;
                //output_bit(PSyncS,1);
             }
@@ -2213,7 +2226,6 @@ void TIMER2_isr(void)      //10ms
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
-
 
 //////////////////////////////////////////////////////////////////////////////
 void Anal_Function(void)

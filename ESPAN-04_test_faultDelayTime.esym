@@ -1,10 +1,10 @@
-F N "Anal_Function" 0 2218 ""
-D G "__PCH__" 0 3435 ""5.091""
-D G "__DEVICE__" 0 3435 "2622"
-D G "__DATE__" 0 3435 ""9-Sep-21""
-D G "__TIME__" 0 3435 ""16:58:09""
-D G "_UNICODE" 0 3435 ""?""
-D G "__EVAL" 0 3435 ""?"" "#include <18F252.h>"
+C L "MAIN" 0 323 1 "FUNCTION"
+D G "__PCH__" 0 4923 ""5.091""
+D G "__DEVICE__" 0 4923 "2622"
+D G "__DATE__" 0 4923 ""10-Sep-21""
+D G "__TIME__" 0 4923 ""11:04:55""
+D G "_UNICODE" 0 4923 ""?""
+D G "__EVAL" 0 4923 ""?"" "#include <18F252.h>"
 c L "set_tris_a" 2 1 6 "FUNCTION"
 f N "set_tris_a" 2 45 ""
 v L "value" 2 45 "int8" `55 
@@ -1845,7 +1845,7 @@ C L "Read_input" 0 20 1 "FUNCTION"
 V G "recieve_completed" 0 181 "int1" `931 
 V G "sequence" 0 182 "int8" `932  "keep sequence use for RxD"
 V G "address" 0 183 "int8" `933 
-V G "RxD_DataLen" 0 184 "int8" `934 
+V G "RxD_DataLen" 0 184 "int16" `934 
 V G "TxD_Buff" 0 185 "int8[256]" `935 
 V G "RxD_Buff" 0 186 "int8[1024]" `936 
 V G "CRC_Lo" 0 187 "int8" `937 
@@ -1928,6 +1928,12 @@ C L "Alarmtosend" 0 323 1 "FUNCTION"
 C L "Alarmtosend" 0 323 1 "FUNCTION"
 F N "checkCommand" 0 464 ""
 F G "checkCommand" 0 465 "void()" `1015 
+V L "count_bytecount" 0 466 "int8" `1016 
+C L "checkCommand" 0 323 1 "FUNCTION"
+C L "checkCommand" 0 323 1 "FUNCTION"
+C L "checkCommand" 0 323 1 "FUNCTION"
+C L "checkCommand" 0 323 1 "FUNCTION"
+C L "checkCommand" 0 323 1 "FUNCTION"
 C L "checkCommand" 0 323 1 "FUNCTION"
 C L "checkCommand" 0 323 1 "FUNCTION"
 C L "checkCommand" 0 323 1 "FUNCTION"
@@ -1963,8 +1969,8 @@ C L "checkCommand" 0 323 1 "FUNCTION"
 C L "checkCommand" 0 323 1 "FUNCTION"
 C L "checkCommand" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
-F N "Modbus_Function" 0 593 ""
-F G "Modbus_Function" 0 594 "void()" `1016 
+F N "Modbus_Function" 0 609 ""
+F G "Modbus_Function" 0 610 "void()" `1017 
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
@@ -2108,24 +2114,17 @@ C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
-V L "a" 0 1101 "int16" `1017 
-V L "phonenum" 0 1102 "int8" `1018 
+V L "a" 0 1117 "int16" `1018 
+V L "phonenum" 0 1118 "int8" `1019 
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
-V L "i" 0 1146 "int16" `1019 
-V L "j" 0 1146 "int16" `1020 
-V L "k" 0 1146 "int16" `1021 
-C L "Modbus_Function" 0 323 1 "FUNCTION"
-C L "Modbus_Function" 0 323 1 "FUNCTION"
-C L "Modbus_Function" 0 323 1 "FUNCTION"
-C L "Modbus_Function" 0 323 1 "FUNCTION"
-C L "Modbus_Function" 0 323 1 "FUNCTION"
-C L "Modbus_Function" 0 323 1 "FUNCTION"
-C L "Modbus_Function" 0 323 1 "FUNCTION"
+V L "i" 0 1162 "int16" `1020 
+V L "j" 0 1162 "int16" `1021 
+V L "k" 0 1162 "int16" `1022 
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
@@ -2144,14 +2143,21 @@ C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
 C L "Modbus_Function" 0 323 1 "FUNCTION"
-F N "Read_input" 0 1408 ""
-F G "Read_input" 0 1409 "void()" `836  "--Edit--///////////////////"
+C L "Modbus_Function" 0 323 1 "FUNCTION"
+C L "Modbus_Function" 0 323 1 "FUNCTION"
+C L "Modbus_Function" 0 323 1 "FUNCTION"
+C L "Modbus_Function" 0 323 1 "FUNCTION"
+C L "Modbus_Function" 0 323 1 "FUNCTION"
+C L "Modbus_Function" 0 323 1 "FUNCTION"
+C L "Modbus_Function" 0 323 1 "FUNCTION"
+F N "Read_input" 0 1424 ""
+F G "Read_input" 0 1425 "void()" `836  "--Edit--///////////////////"
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
-V L "i" 0 1467 "int8" `1022 
+V L "i" 0 1483 "int8" `1023 
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
@@ -2159,8 +2165,8 @@ C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_input" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
-F N "Read_Config" 0 1702 ""
-F G "Read_Config" 0 1703 "void()" `834 
+F N "Read_Config" 0 1718 ""
+F G "Read_Config" 0 1719 "void()" `834 
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
@@ -2181,12 +2187,12 @@ C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
-V L "a" 0 1878 "int8" `1030 
-V L "phonenum" 0 1879 "int8" `1031 
-V L "i" 0 1897 "int16" `1032 
-V L "j" 0 1897 "int16" `1033 
-V L "k" 0 1897 "int16" `1034 
-V L "buff" 0 1897 "int16" `1035 
+V L "a" 0 1894 "int8" `1031 
+V L "phonenum" 0 1895 "int8" `1032 
+V L "i" 0 1913 "int16" `1033 
+V L "j" 0 1913 "int16" `1034 
+V L "k" 0 1913 "int16" `1035 
+V L "buff" 0 1913 "int16" `1036 
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
@@ -2197,15 +2203,13 @@ C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
 C L "Read_Config" 0 323 1 "FUNCTION"
-F N "RDA_isr" 0 2098 ""
-F G "RDA_isr" 0 2099 "void()" `1036 
-F N "TIMER1_isr" 0 2104 ""
-F G "TIMER1_isr" 0 2105 "void()" `1037  "ReadIn_flag =1;"
-F N "TIMER2_isr" 0 2110 ""
+F N "RDA_isr" 0 2114 ""
+F G "RDA_isr" 0 2115 "void()" `1037 
+F N "TIMER1_isr" 0 2120 ""
+F G "TIMER1_isr" 0 2121 "void()" `1038  "ReadIn_flag =1;"
+F N "TIMER2_isr" 0 2126 ""
 C L "TIMER2_isr" 0 323 1 "FUNCTION"
-F G "TIMER2_isr" 0 2111 "void()" `1038 
-C L "TIMER2_isr" 0 323 1 "FUNCTION"
-C L "TIMER2_isr" 0 323 1 "FUNCTION"
+F G "TIMER2_isr" 0 2127 "void()" `1039 
 C L "TIMER2_isr" 0 323 1 "FUNCTION"
 C L "TIMER2_isr" 0 323 1 "FUNCTION"
 C L "TIMER2_isr" 0 323 1 "FUNCTION"
@@ -2217,8 +2221,10 @@ C L "TIMER2_isr" 0 323 1 "FUNCTION"
 C L "TIMER2_isr" 0 323 1 "FUNCTION"
 C L "TIMER2_isr" 0 323 1 "FUNCTION"
 C L "TIMER2_isr" 0 323 1 "FUNCTION"
-F N "Anal_Function" 0 2218 ""
-F G "Anal_Function" 0 2219 "void()" `1039  "MANUAL RESET /////////////////////////////////"
+C L "TIMER2_isr" 0 323 1 "FUNCTION"
+C L "TIMER2_isr" 0 323 1 "FUNCTION"
+F N "Anal_Function" 0 2231 ""
+F G "Anal_Function" 0 2232 "void()" `1040  "MANUAL RESET /////////////////////////////////"
 C L "Anal_Function" 0 323 2 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 2 "FUNCTION"
@@ -2370,7 +2376,7 @@ C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 3 "FUNCTION"
-V L "inputflag" 0 3184 "int8" `1105 
+V L "inputflag" 0 3197 "int8" `1106 
 C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
@@ -2581,8 +2587,8 @@ C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
 C L "Anal_Function" 0 323 1 "FUNCTION"
-F N "Send_Ouput" 0 4047 ""
-F G "Send_Ouput" 0 4048 "void()" `1126 
+F N "Send_Ouput" 0 4060 ""
+F G "Send_Ouput" 0 4061 "void()" `1127 
 C L "Send_Ouput" 0 323 1 "FUNCTION"
 C L "Send_Ouput" 0 323 1 "FUNCTION"
 C L "Send_Ouput" 0 323 1 "FUNCTION"
@@ -2623,18 +2629,18 @@ C L "Send_Ouput" 0 323 1 "FUNCTION"
 C L "Send_Ouput" 0 323 1 "FUNCTION"
 C L "Send_Ouput" 0 323 1 "FUNCTION"
 C L "Send_Ouput" 0 323 1 "FUNCTION"
-F N "ForceAllAlarm" 0 4263 ""
-F G "ForceAllAlarm" 0 4264 "void()" `835 
+F N "ForceAllAlarm" 0 4276 ""
+F G "ForceAllAlarm" 0 4277 "void()" `835 
 C L "check_test" 0 323 1 "FUNCTION"
-F N "check_test" 0 4296 ""
-F G "check_test" 0 4297 "void()" `830 
-V L "output_temp" 0 4298 "int8[8]" `1127 
+F N "check_test" 0 4309 ""
+F G "check_test" 0 4310 "void()" `830 
+V L "output_temp" 0 4311 "int8[8]" `1128 
 C L "check_test" 0 323 1 "FUNCTION"
 C L "check_test" 0 323 1 "FUNCTION"
 C L "check_test" 0 323 4 "FUNCTION"
 C L "check_ack" 0 323 1 "FUNCTION"
-F N "check_ack" 0 4353 ""
-F G "check_ack" 0 4354 "void()" `829 
+F N "check_ack" 0 4366 ""
+F G "check_ack" 0 4367 "void()" `829 
 C L "check_ack" 0 323 1 "FUNCTION"
 C L "check_ack" 0 323 1 "FUNCTION"
 C L "check_ack" 0 323 1 "FUNCTION"
@@ -2649,17 +2655,17 @@ C L "check_ack" 0 323 1 "FUNCTION"
 C L "check_ack" 0 323 1 "FUNCTION"
 C L "check_ack" 0 323 1 "FUNCTION"
 C L "check_reset" 0 323 1 "FUNCTION"
-F N "check_reset" 0 4450 ""
-F G "check_reset" 0 4451 "void()" `831 
+F N "check_reset" 0 4463 ""
+F G "check_reset" 0 4464 "void()" `831 
 C L "CheckAutoReset" 0 323 1 "FUNCTION"
-F N "CheckAutoReset" 0 4479 ""
-V L "DatType" 0 4479 "int8" `1129 
-F G "CheckAutoReset" 0 4480 "int8(int8 DatType)" `832 
-V L "check" 0 4481 "int1" `1128  "/ "1" = true  //Other Alarm active or not "ACK""
+F N "CheckAutoReset" 0 4492 ""
+V L "DatType" 0 4492 "int8" `1130 
+F G "CheckAutoReset" 0 4493 "int8(int8 DatType)" `832 
+V L "check" 0 4494 "int1" `1129  "/ "1" = true  //Other Alarm active or not "ACK""
 C L "CheckAutoReset" 0 323 1 "FUNCTION"
 C L "CheckAutoReset" 0 323 1 "FUNCTION"
-F N "MAIN" 0 4517 ""
-F G "MAIN" 0 4518 "void()" `1129 
+F N "MAIN" 0 4530 ""
+F G "MAIN" 0 4531 "void()" `1130 
 C L "MAIN" 0 323 5 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
@@ -2680,12 +2686,7 @@ C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
-C L "MAIN" 0 323 1 "FUNCTION"
-C L "MAIN" 0 323 1 "FUNCTION"
-C L "MAIN" 0 323 1 "FUNCTION"
-C L "MAIN" 0 323 1 "FUNCTION"
-C L "MAIN" 0 323 1 "FUNCTION"
-V L "i" 0 4621 "int8" `1132 
+V L "i" 0 4628 "int8" `1133 
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
@@ -2697,7 +2698,10 @@ C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
-V L "i" 0 4751 "int8" `1133 
+V L "i" 0 4755 "int8" `1134 
+C L "MAIN" 0 323 1 "FUNCTION"
+V L "m" 0 4852 "int8" `1138 
+C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"
 C L "MAIN" 0 323 1 "FUNCTION"

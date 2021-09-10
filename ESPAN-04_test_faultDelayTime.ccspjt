@@ -9,7 +9,7 @@ enabled=0
 chip=1
 D1=
 V1=
-buildcount=9
+buildcount=13
 
 [fileformats]
 forcecoff=0
@@ -61,8 +61,8 @@ Fixed=
 
 [Opened Files]
 1=ESPAN-04_test_faultDelayTime.c
-t1=3531
-Count=2
+t1=1
+Count=1
 2=..\ESPAN04_20 - Delay - SP - SMD - PIC18F252\ESPAN-04.h
 t2=1
 
@@ -112,11 +112,24 @@ D3_E=107
 D3_D=0
 D3_L24=[61826]Project Closed.
 D4=10-09-2021
-D4_L=4
+D4_L=17
 D4_L1=[30185]Project Opened.
 D4_L2=[30679]Started Editing.
 D4_L3=[30979]Stopped Editing.
 D4_L4=[36984]Started Editing.
+D4_L5=[38135]Stopped Editing.
+D4_L6=[38482]Started Editing.
+D4_L7=[38782]Stopped Editing.
+D4_L8=[38818]Started Editing.
+D4_L9=[39327]Stopped Editing.
+D4_L10=[39474]Started Editing.
+D4_L11=[39774]Project Closed.
+D4_L12=[39845]Project Opened.
+D4_L13=[39981]Project Closed.
+D4_L14=[39995]Project Opened.
+D4_L15=[40129]Started Editing.
+D4_L16=[40751]Stopped Editing.
+D4_L17=[41035]Project Closed.
 [Units]
 Count=1
 1=ESPAN-04_test_faultDelayTime (main)
