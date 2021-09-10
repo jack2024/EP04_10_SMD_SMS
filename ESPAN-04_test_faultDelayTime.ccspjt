@@ -9,7 +9,7 @@ enabled=0
 chip=1
 D1=
 V1=
-buildcount=1
+buildcount=9
 
 [fileformats]
 forcecoff=0
@@ -29,9 +29,9 @@ stayupoe=0
 [PROJECT]
 Target=ESPAN-04_test_faultDelayTime.hex
 Development_Mode=
-Processor_Text=PIC18F252
+Processor_Text=PIC18F26K22
 ToolSuite=CCS
-CCSVersion=5.080
+CCSVersion=5.091
 Compiler=PCH
 
 [Target Data]
@@ -61,13 +61,13 @@ Fixed=
 
 [Opened Files]
 1=ESPAN-04_test_faultDelayTime.c
-t1=6518
+t1=3531
 Count=2
-2=C:\Program Files (x86)\PICC\Devices\18F252.h
-t2=46
+2=..\ESPAN04_20 - Delay - SP - SMD - PIC18F252\ESPAN-04.h
+t2=1
 
 [ProjectLog]
-Days=3
+Days=4
 D1=21-12-2017
 D1_L=3
 D1_L1=[34828]Project Closed.
@@ -82,9 +82,41 @@ D2_L4=[50874]Started Editing.
 D2_L5=[51320]Stopped Editing.
 D2_L6=[51488]Project Closed.
 D3=09-09-2021
-D3_L=2
+D3_L=24
 D3_L1=[33132]Project Opened.
 D3_L2=[33138]Started Editing.
+D3_L3=[33742]Stopped Editing.
+D3_L4=[34309]Started Editing.
+D3_L5=[35382]Stopped Editing.
+D3_L6=[52498]Started Editing.
+D3_L7=[52805]Stopped Editing.
+D3_L8=[52947]Started Editing.
+D3_L9=[53247]Stopped Editing.
+D3_L10=[53467]Started Editing.
+D3_L11=[53795]Stopped Editing.
+D3_L12=[53958]Started Editing.
+D3_L13=[54622]Stopped Editing.
+D3_L14=[55148]Started Editing.
+D3_L15=[55832]Stopped Editing.
+D3_L16=[55855]Started Editing.
+D3_L17=[56971]Stopped Editing.
+D3_L18=[57166]Started Editing.
+D3_L19=[57802]Stopped Editing.
+D3_L20=[57887]Started Editing.
+D3_L21=[59726]Stopped Editing.
+D3_L22=[60011]Started Editing.
+D3_L23=[61826]Stopped Editing.
+TotalEdit=107
+TotalDebug=0
+D3_E=107
+D3_D=0
+D3_L24=[61826]Project Closed.
+D4=10-09-2021
+D4_L=4
+D4_L1=[30185]Project Opened.
+D4_L2=[30679]Started Editing.
+D4_L3=[30979]Stopped Editing.
+D4_L4=[36984]Started Editing.
 [Units]
 Count=1
 1=ESPAN-04_test_faultDelayTime (main)
