@@ -1,1 +1,44 @@
-Compiling D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime on 10-¡.Â.-21 at 11:10
+Compiling D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime on 11-¡.Â.-21 at 21:15
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3265(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3275(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3350(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3360(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3436(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3445(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3521(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3531(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3606(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3616(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3692(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3701(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3777(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3787(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3863(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3873(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3949(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 3958(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 4034(38,39): Code has no effect
+>>> Warning 207 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 4044(38,39): Code has no effect
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 100(6,14): Variable never used:   SyncFlag
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 110(6,15): Variable never used:   Output595
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 112(6,14): Variable never used:   tempdata
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 149(6,14): Variable never used:   Red11_18
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 150(6,14): Variable never used:   Red19_20
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 153(6,16): Variable never used:   Green11_18
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 154(6,16): Variable never used:   Green19_20
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 156(6,15): Variable never used:   OUTRed1_8
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 157(6,16): Variable never used:   OUTRed9_10
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 158(6,17): Variable never used:   OUTRed11_18
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 159(6,17): Variable never used:   OUTRed19_20
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 160(6,17): Variable never used:   OUTGreen1_8
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 161(6,18): Variable never used:   OUTGreen9_10
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 162(6,19): Variable never used:   OUTGreen11_18
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 163(6,19): Variable never used:   OUTGreen19_20
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 169(6,21): Variable never used:   MasterSlaveSync
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 200(6,21): Variable never used:   MCP23s17_Op_dat
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 279(14,24): Variable never used:   LED_Colour
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 1167(29,30): Variable never used:   k
+>>> Warning 202 "D:\jobESP\ESPAN-04\Firmware\SPAN-04\ESPAN04_10 - Delay - SP - SMD -SMS\ESPAN-04_test_faultDelayTime.c" Line 1918(20,21): Variable never used:   k
+      Memory usage:   ROM=47%      RAM=48% - 49%
+      0 Errors,  40 Warnings.
+Build Successful.

@@ -176,14 +176,14 @@ volatile int1 RefreshConfigData =0;
 
 //////////////////////////////////////
 unsigned char const addr_sq = 0x10,end_sq = 0x11,code_sq = 0x12,start_addr_hi_sq = 0x13,start_addr_lo_sq = 0x14;         //serial sequnce
-unsigned char const ubyte_hi_sq = 0x15,ubyte_lo_sq = 0x16,crc_hi_sq = 0x17,byte_count_sq = 0x19,data_sq = 0x20;      //serial sequnce
+unsigned char const ubyte_hi_sq = 0x15,ubyte_lo_sq = 0x16,crc_hi_sq = 0x17, second_numofdata = 0x18,byte_count_sq = 0x19,data_sq = 0x20;      //serial sequnce
 
 int1 recieve_completed = 0;
 unsigned char sequence;         //keep sequence use for RxD
 unsigned char Address;
 unsigned int16 RxD_DataLen = 0x00;
 unsigned char TxD_Buff[256];
-unsigned char RxD_Buff[1024];
+unsigned char RxD_Buff[512];
 unsigned char CRC_Lo;
 unsigned char CRC_Hi;
 int16 Send_check_Time = 500; //if no send reset buffer every 5 second
@@ -191,7 +191,7 @@ int16 Send_check_Time = 500; //if no send reset buffer every 5 second
 int16 Start_Address = 0x0000;
 int16 No_PointCount = 0x0000;
 unsigned char Data_ByteCount = 0x00;
-unsigned char Data_Buff[1024];
+unsigned char Data_Buff[512];
 //unsigned char DataTemp;
 //unsigned char TxD_DataLen;
 
@@ -313,7 +313,7 @@ void CRC(unsigned char *puchMsg , unsigned char usDataLen)
 
    for(i = 0;i < usDataLen;i++)
    {
-      restart_wdt();
+      restart_wdt() ;
       uIndex = CRC_Hi ^ (unsigned char) puchMsg[i] ;
       CRC_Hi = CRC_Lo ^ CRC_Table_Hi[uIndex] ;
       CRC_Lo = CRC_Table_Lo[uIndex] ;
@@ -500,14 +500,9 @@ void checkCommand(void)
           T_timeout = 0x14; //200ms
        }
        //   SMS     
-       else if(RxD_Buff[1] == 0x22)   /////SMS setting/////
+       else if(RxD_Buff[RxD_DataLen - 1] == 0x22)   /////SMS setting/////
        {
-          if(count_bytecount ==0){ // bytecount first Byte
-            count_bytecount =1;
-           }
-           else if (count_bytecount == 1){ // bytecount Second Byte
-            sequence = byte_count_sq ;
-           }
+          sequence = second_numofdata ;
           T_timeout = 0x14; //200ms
        }
        else                           // Invalid Code
@@ -519,6 +514,16 @@ void checkCommand(void)
           count_bytecount =0; // bytecount = 2 Byte //jj10092564
        }
    }
+   ////////////////////////////////
+   else if(sequence == second_numofdata)
+   {
+      RxD_Buff[RxD_DataLen] = SBUF ;      //Byte 3   Start address High Byte
+      restart_wdt();
+      RxD_DataLen ++ ;
+      sequence = byte_count_sq;
+      T_timeout = 0x14; //200ms
+
+   }
    else if(sequence == byte_count_sq)
    {
       RxD_Buff[RxD_DataLen] = SBUF ;      //Byte 3   Data Byte Count
@@ -526,7 +531,7 @@ void checkCommand(void)
       RxD_DataLen ++ ;
       if(RxD_Buff[1] == 0x22)   /////SMS setting/////
       {
-         index = (RxD_Buff[2]*100) + RxD_Buff[3];
+         index = (RxD_Buff[2] * 0x64) + RxD_Buff[3];
       }
       else{
          index = RxD_Buff[RxD_DataLen - 1] ;    //Data Byte Count
@@ -1350,7 +1355,7 @@ void Modbus_Function(void)
             
          
             TxD_Buff[0] = Address ;         //Address
-            TxD_Buff[1] = 0x21 ;            //return function code
+            TxD_Buff[1] = 0x22 ;            //return function code
 
             CRC(TxD_Buff,2)   ;            //Cal CRC 2 byte
 
@@ -1916,7 +1921,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D)|| (j>41))
+      if((buff == 0x0D)|| (j>30))
       {
          SMS_Massage1[j] = '\0' ; // end string
          break;
@@ -1935,7 +1940,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage2[j] = '\0' ; // end string
          break;
@@ -1955,7 +1960,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage3[j] = '\0' ; // end string
          break;
@@ -1975,7 +1980,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage4[j] = '\0' ; // end string
          break;
@@ -1995,7 +2000,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage5[j] = '\0' ; // end string
          break;
@@ -2015,7 +2020,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage6[j] = '\0' ; // end string
          break;
@@ -2035,7 +2040,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage7[j] = '\0' ; // end string
          break;
@@ -2055,7 +2060,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage8[j] = '\0' ; // end string
          break;
@@ -2075,7 +2080,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage9[j] = '\0' ; // end string
          break;
@@ -2095,7 +2100,7 @@ void Read_Config(void)
       restart_wdt();
       buff = read_eeprom(0x5D+i);
       
-      if((buff == 0x0D) || (j>41))
+      if((buff == 0x0D) || (j>30))
       {
          SMS_Massage10[j] = '\0' ; // end string
          break;
@@ -2517,7 +2522,7 @@ void Anal_Function(void)
       else
       {
          Output.B3 = 1;
-         SendSMS.B5 =0;
+         SendSMS.B3 =0;
          functointest_f =0;
       }
    }
@@ -4884,7 +4889,7 @@ void main()
       Read_input(); restart_wdt();//Must be first
       Anal_Function(); restart_wdt();
       Send_Ouput(); restart_wdt();
-      Driver595(); restart_wdt();
+      //Driver595(); restart_wdt();
       
       
       output_toggle(PIN_A0);
